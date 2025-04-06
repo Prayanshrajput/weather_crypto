@@ -15,10 +15,10 @@ const NewsSection = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div className="p-4 bg-white rounded-xl shadow mt-6">
+    <div className="p-4  bg-white rounded-xl shadow mt-6">
       <h2 className="text-2xl font-bold mb-4 text-blue-600">Top Crypto News</h2>
-      <ul className="space-y-3">
-        {articles.map((article, index) => (
+     
+        {articles ?( <ul className="space-y-3"> {articles.map((article, index) => (
           <li key={index} className="border-b pb-2">
             <a
               href={article.link}
@@ -30,8 +30,8 @@ const NewsSection = () => {
             </a>
             <p className="text-sm text-gray-500">{article.source_id} | {new Date(article.pubDate).toLocaleDateString()}</p>
           </li>
-        ))}
-      </ul>
+        ))}</ul> ):(<div className='flex w-full h-full justify-center items-center text-red-600 text-xl font-semibold'>Some Thing went Wrong</div>)}
+     
     </div>
   );
 };

@@ -68,6 +68,7 @@ export default function Dashboard (){
   <div className="w-full lg:w-1/2">
     <Weather />
   </div>
+  
   <div className="w-full lg:w-1/2">
     <NewsSection />
   </div>

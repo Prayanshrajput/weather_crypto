@@ -1,7 +1,7 @@
-// components/sections/CryptoSection.jsx
+
  'use client'
 import { fetchCryptoData } from '@/lib/cryptoSlice';
-// components/CryptoSection.jsx
+
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -9,6 +9,7 @@ export default function CryptoSection(){
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector((state) => state.crypto);
 
+ 
   useEffect(() => {
     dispatch(fetchCryptoData());
   }, [dispatch]);
